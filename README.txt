@@ -1,0 +1,1 @@
+PragyaSeva CSC / Pragya Kendra demo. Open index.html in a browser. This is a frontend-only demo using localStorage; production should use React/Node/Express/PostgreSQL with authentication and secure document handling.

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PragyaSeva | CSC Digital Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="#home"><i>&lt;</i>Pragya<span>Seva</span><i>/&gt;</i></a><button
+                class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+            <nav class="links"><a href="#home">Home</a><a href="#services">Services</a><a href="#request">Apply /
+                    Enquire</a><a href="#about">About</a><a href="#admin">Admin Dashboard</a></nav>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="wrap grid2">
+                    <div><span class="eyebrow">CSC • Pragya Kendra • Digital Seva</span>
+                        <h1>Get your digital services started <span>without repeated calls.</span></h1>
+                        <p>Choose the service you need, submit your basic details and send your request directly to the
+                            Kendra. The operator can review it and contact you for the next steps.</p>
+                        <div class="buttons"><a class="btn primary" href="#request">Start a Request →</a><a
+                                class="btn secondary" href="#services">View Services</a></div>
+                    </div>
+                    <div class="card"><span class="eyebrow">How it works</span>
+                        <div class="flow">
+                            <div class="step"><b>01</b>
+                                <div><strong>Choose service</strong><small>PAN, ration card, certificates & more</small>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step"><b>02</b>
+                                <div><strong>Submit details</strong><small>Tell us what you need</small></div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step"><b>03</b>
+                                <div><strong>We contact you</strong><small>Guidance on documents & next steps</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section soft">
+                <div class="wrap">
+                    <div class="head">
+                        <div><span class="eyebrow">Popular services</span>
+                            <h2>Tell us what you need.</h2>
+                        </div><a href="#services">View all →</a>
+                    </div>
+                    <div class="services" id="homeServices"></div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="wrap split">
+                    <div><span class="eyebrow">Simple for customers</span>
+                        <h2>One request. One place to manage it.</h2>
+                        <p>Customers can see available services, send their details and explain what they need before
+                            the first call.</p>
+                        <ul class="checks">
+                            <li>Service-wise request collection</li>
+                            <li>Customer details stored in one place</li>
+                            <li>Quick call and WhatsApp actions</li>
+                            <li>Pending / processing / completed status</li>
+                        </ul><a class="btn primary" href="#request">Submit a Request</a>
+                    </div>
+                    <div class="dash"><b>Today's overview</b>
+                        <div class="stats">
+                            <div class="stat"><small>New requests</small><strong>12</strong></div>
+                            <div class="stat"><small>Pending</small><strong>28</strong></div>
+                            <div class="stat"><small>Completed</small><strong>164</strong></div>
+                        </div>
+                        <div class="rows">
+                            <div class="row head"><span>Customer</span><span>Service</span><span>Status</span></div>
+                            <div class="row"><span>Rahul Kumar</span><span>PAN Card</span><em
+                                    class="badge pending">Pending</em></div>
+                            <div class="row"><span>Sunita Devi</span><span>Ration Card</span><em
+                                    class="badge process">Processing</em></div>
+                            <div class="row"><span>Amit Oraon</span><span>Voter ID</span><em
+                                    class="badge done">Completed</em></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="page">
+            <div class="pagehero">
+                <div class="wrap"><span class="eyebrow">Digital services</span>
+                    <h1>Choose the service you want to avail.</h1>
+                    <p>Sample categories for the demo. The final website can use the exact services offered by the
+                        Kendra.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="wrap">
+                    <div class="toolbar">
+                        <input class="adminsearch" id="search" placeholder="Search services...">
+                        <select class="admin-status" id="cat">
+                            <option value="all">All categories</option>
+                            <option value="identity">Identity & documents</option>
+                            <option value="government">Government services</option>
+                            <option value="certificate">Certificates</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="services" id="allServices"></div>
+                </div>
+            </div>
+        </section>
+        <section id="request" class="page">
+            <div class="pagehero">
+                <div class="wrap"><span class="eyebrow">Customer request</span>
+                    <h1>Tell us what you need.</h1>
+                    <p>Submit your details and the Kendra operator can contact you directly.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="wrap formgrid">
+                    <form class="formcard" id="form">
+                        <h2>Request details</h2>
+                        <p>Fields marked * are required.</p><label>Service *<select id="service" required>
+                                <option value="">Select a service</option>
+                            </select></label>
+                        <div class="two"><label>Full name *<input id="name" required
+                                    placeholder="Your name"></label><label>Mobile *<input id="phone" required
+                                    pattern="[6-9][0-9]{9}" placeholder="10-digit mobile"></label></div>
+                        <div class="two"><label>Email<input id="email" type="email"
+                                    placeholder="Optional"></label><label>Preferred contact<select id="contact">
+                                    <option>Phone call</option>
+                                    <option>WhatsApp</option>
+                                </select></label></div><label>Address<textarea id="address" rows="3"
+                                placeholder="Village / locality / address"></textarea></label><label>What do you need
+                            help with? *<textarea id="message" rows="5" minlength="10" required
+                                placeholder="Briefly describe your requirement..."></textarea></label><button
+                            class="btn primary" type="submit">Send Request →</button>
+                        <p style="font-size:11px">Demo: requests are saved in this browser only. Production version will
+                            use a secure backend and database.</p>
+                    </form>
+                    <div>
+                        <div class="card"><span class="eyebrow">What happens next?</span>
+                            <h3>We review your request.</h3>
+                            <p>1. Request received<br>2. Operator reviews details<br>3. Customer contacted for documents
+                                and next steps</p><a class="btn secondary" href="tel:+919999999999">Call Kendra</a> <a
+                                class="btn secondary" href="https://wa.me/919999999999" target="_blank">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="page">
+            <div class="pagehero">
+                <div class="wrap"><span class="eyebrow">About the Kendra</span>
+                    <h1>A simple digital front desk for your Pragya Kendra.</h1>
+                    <p>Use this section for the operator's introduction, working hours, location and contact
+                        information.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="wrap split">
+                    <div><span class="eyebrow">Why this website?</span>
+                        <h2>Reduce repeated queries and organise every request.</h2>
+                        <p>Customers can see services before calling, submit basic details and explain what they need.
+                            The operator gets one organised place to manage those requests.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Pragya Digital Seva Kendra</h3>
+                        <p>Ranchi, Jharkhand<br>Mon–Sat • 9:00 AM – 7:00 PM</p>
+                        <div
+                            style="height:190px;border-radius:14px;background:#eaf0f7;display:grid;place-items:center;color:#6b7a8f;font-weight:800;letter-spacing:2px">
+                            MAP / LOCATION</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="admin" class="page">
+            <div class="pagehero">
+                <div class="wrap"><span class="eyebrow">Operator panel</span>
+                    <h1>Customer requests</h1>
+                    <p>Demo dashboard for managing enquiries and applications.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="wrap">
+                    <div class="adminstats" id="adminstats"></div>
+                    <div class="toolbar">
+                        <input class="adminsearch" id="search" placeholder="Search customer, phone or service...">
+                        <select class="admin-status" id="status">
+                            <option value="all">All status</option>
+                            <option>New</option>
+                            <option>Pending</option>
+                            <option>Processing</option>
+                            <option>Completed</option>
+                        </select>
+                    </div>
+                    <div class="card" style="overflow:auto">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Service</th>
+                                    <th>Contact</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody"></tbody>
+                        </table>
+                    </div>
+                    <div class="notice">Production version: secure admin authentication, PostgreSQL database,
+                        server-side validation, role permissions and persistent customer/application records.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="cta">
+        <div class="wrap">
+            <h2>Send your requirement once. We'll take it from there.</h2><a class="btn light" href="#request">Start
+                Request →</a>
+        </div>
+    </div>
+    <footer>
+        <div class="wrap"><a class="brand" href="#home"><i>&lt;</i>Pragya<span>Seva</span><i>/&gt;</i></a>
+            <p>Demo website for a CSC / Pragya Kendra customer request and management system.</p>
+        </div>
+    </footer>
+    <script>
+        const services = [['PAN Card', 'identity', '▣'], ['Ration Card', 'government', '▤'], ['Voter ID', 'identity', '✓'], ['Ayushman Card', 'government', '✚'], ['Income Certificate', 'certificate', '₹'], ['Caste Certificate', 'certificate', '◈'], ['Residence Certificate', 'certificate', '⌂'], ['Birth Certificate', 'certificate', '✦'], ['Aadhaar Services', 'identity', '◎'], ['e-Shram', 'government', '◉'], ['Online Form Filling', 'other', '⌁'], ['Other Service', 'other', '＋']];
+        const desc = 'Assistance with the selected digital service and related customer request.';
+        function card(s) { return `<article class="service"><div class="icon">${s[2]}</div><h3>${s[0]}</h3><p>${desc}</p><button onclick="pick('${s[0].replaceAll("'", "\\'")}')">Request this service →</button></article>` }
+        function render() { const home = document.getElementById('homeServices'); if (home) home.innerHTML = services.slice(0, 8).map(card).join(''); const all = document.getElementById('allServices'); if (all) { const q = (document.getElementById('search').value || '').toLowerCase(), c = document.getElementById('cat').value; all.innerHTML = services.filter(s => (c === 'all' || s[1] === c) && s[0].toLowerCase().includes(q)).map(card).join('') } }
+        function pick(s) { location.hash = 'request'; setTimeout(() => document.getElementById('service').value = s, 50) }
+        function seed() { if (!localStorage.requests) localStorage.requests = JSON.stringify([{ id: 'CSC-452', name: 'Rahul Kumar', phone: '9876543210', service: 'PAN Card', status: 'Pending', date: '2026-10-04' }, { id: 'CSC-451', name: 'Sunita Devi', phone: '9123456780', service: 'Ration Card', status: 'Processing', date: '2026-10-04' }, { id: 'CSC-450', name: 'Amit Oraon', phone: '9988776655', service: 'Voter ID', status: 'Completed', date: '2026-10-03' }]) } function reqs() { seed(); return JSON.parse(localStorage.requests) }
+        function admin() { const t = document.getElementById('tbody'); if (!t) return; const q = (document.getElementById('adminsearch').value || '').toLowerCase(), st = document.getElementById('status').value, a = reqs().filter(x => (st === 'all' || x.status === st) && `${x.name} ${x.phone} ${x.service}`.toLowerCase().includes(q)); t.innerHTML = a.map(x => `<tr><td><b>${x.name}</b><br><small>${x.id}</small></td><td>${x.service}</td><td><a href="tel:${x.phone}">${x.phone}</a><br><a href="https://wa.me/91${x.phone}" target="_blank">WhatsApp</a></td><td><select onchange="changeStatus('${x.id}',this.value)"><option ${x.status === 'New' ? 'selected' : ''}>New</option><option ${x.status === 'Pending' ? 'selected' : ''}>Pending</option><option ${x.status === 'Processing' ? 'selected' : ''}>Processing</option><option ${x.status === 'Completed' ? 'selected' : ''}>Completed</option></select></td><td>${x.date}</td></tr>`).join(''); const ar = reqs(); document.getElementById('adminstats').innerHTML = [['Total', ar.length], ['New', ar.filter(x => x.status === 'New').length], ['Pending', ar.filter(x => x.status === 'Pending').length], ['Completed', ar.filter(x => x.status === 'Completed').length]].map(x => `<div class="adminstat"><small>${x[0]}</small><strong>${x[1]}</strong></div>`).join('') }
+        function changeStatus(id, v) { const a = reqs(), x = a.find(r => r.id === id); x.status = v; localStorage.requests = JSON.stringify(a); admin() }
+        function route() { const id = location.hash.slice(1) || 'home'; document.querySelectorAll('.page').forEach(x => x.classList.toggle('active', x.id === id)); document.querySelector('.links').classList.remove('open'); if (id === 'services') render(); if (id === 'admin') admin(); window.scrollTo(0, 0) }
+        document.getElementById('search')?.addEventListener('input', render); document.getElementById('cat')?.addEventListener('change', render); document.getElementById('adminsearch')?.addEventListener('input', admin); document.getElementById('status')?.addEventListener('change', admin);
+        services.forEach(s => { const o = document.createElement('option'); o.value = s[0]; o.textContent = s[0]; document.getElementById('service')?.appendChild(o) }); document.getElementById('form')?.addEventListener('submit', e => { e.preventDefault(); const a = reqs(); const id = 'CSC-' + (453 + a.length); a.unshift({ id, name: name.value, phone: phone.value, service: service.value, status: 'New', date: new Date().toISOString().slice(0, 10) }); localStorage.requests = JSON.stringify(a); e.target.innerHTML = `<h2>Request submitted ✓</h2><p>Your request has been saved in this demo.</p><div class="card"><span class="eyebrow">Request ID</span><h2>${id}</h2><p>Keep this ID for future communication.</p><a class="btn primary" href="#admin">Open Admin Dashboard →</a></div>` }); seed(); render(); route(); window.addEventListener('hashchange', route);
+    </script>
+</body>
+
+</html>
